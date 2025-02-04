@@ -34,7 +34,7 @@ return new class extends Migration
 
             $table->foreignId('parent_id')
                 ->nullable()
-                ->constrained('products_categories')
+                ->constrained('products_products')
                 ->cascadeOnDelete();
 
             $table->foreignId('uom_id')
@@ -46,7 +46,7 @@ return new class extends Migration
                 ->restrictOnDelete();
 
             $table->foreignId('category_id')
-                ->constrained('products_products')
+                ->constrained('products_categories')
                 ->cascadeOnDelete();
 
             $table->foreignId('company_id')
